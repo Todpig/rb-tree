@@ -1,6 +1,5 @@
 #include "rb-tree.hpp"
 #include <iostream>
-using namespace std;
 
 void preOrder(Node *root)
 {

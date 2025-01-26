@@ -1,6 +1,5 @@
 #include "rb-tree.hpp"
 #include <iostream>
-using namespace std;
 
 bool isEmpty(Node *root)
 {
