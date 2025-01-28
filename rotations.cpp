@@ -12,7 +12,6 @@ void rightRotate(Node *root)
     temp->parent = root->parent;
     root->parent = temp;
 }
-
 void leftRotate(Node *root)
 {
     Node *temp = root->right;

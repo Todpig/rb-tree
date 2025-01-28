@@ -34,6 +34,7 @@ void menu(Node *&root)
             for (int i = 0; i < treeSize; i++)
             {
                 int randomValue = valueDist(gen);
+                cout << "Inserindo valor " << randomValue << endl;
                 push(root, randomValue);
             }
 

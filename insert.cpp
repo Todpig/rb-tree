@@ -10,17 +10,14 @@ Node *search(int value, Node *root)
 {
     Node *current = root;
     Node *parent = nullptr;
-
     while (current != nullptr)
     {
         parent = current;
-
         if (value == current->value)
         {
             cout << "Value " << value << " already exists in the tree.\n";
             return nullptr;
         }
-
         if (value > current->value)
         {
             current = current->right;
@@ -30,7 +27,6 @@ Node *search(int value, Node *root)
             current = current->left;
         }
     }
-
     return parent;
 }
 
@@ -44,7 +40,6 @@ void readjustColors(Node *root)
     {
         Node *grandparent = root->parent->parent;
         Node *uncle = (grandparent->left == root->parent) ? grandparent->right : grandparent->left;
-
         if (uncle != nullptr && uncle->color == RED)
         {
             root->parent->color = BLACK;
@@ -89,7 +84,6 @@ void readjustColors(Node *root)
         }
     }
 }
-
 void push(Node *&root, int value)
 {
     if (isEmpty(root))
@@ -111,7 +105,6 @@ void push(Node *&root, int value)
         newNode->left = nullptr;
         newNode->right = nullptr;
         newNode->parent = parent;
-
         if (value > parent->value)
         {
             parent->right = newNode;
@@ -120,7 +113,6 @@ void push(Node *&root, int value)
         {
             parent->left = newNode;
         }
-
         readjustColors(newNode);
     }
 }
